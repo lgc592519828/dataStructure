@@ -1,4 +1,4 @@
-package cn.gcheng.linear.util;
+package cn.gcheng.linear.line;
 
 import java.util.Arrays;
 

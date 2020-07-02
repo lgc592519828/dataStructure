@@ -1,13 +1,13 @@
 package cn.gcheng.linear.app;
 
-import cn.gcheng.linear.util.ArrayList;
-import cn.gcheng.linear.util.List;
-import cn.gcheng.linear.util.SingleLinkedList;
+import cn.gcheng.linear.line.ArrayList;
+import cn.gcheng.linear.line.List;
+import cn.gcheng.linear.line.SingleLinkedList;
 
 /**
  *  线性表测试类
  * */
-public class APP {
+public class LineTest {
     public static void main(String[] args) {
         List list = new ArrayList();
         list.add(123);

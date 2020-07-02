@@ -2,9 +2,9 @@
  * FileName: SingleLinkedList
  * Author:   GuoCheng
  * Date:     2020/7/1 16:44
- * Description: 链表实现线性表 模拟 LinkedList
+ * Description: 单链表实现线性表 模拟 LinkedList
  */
-package cn.gcheng.linear.util;
+package cn.gcheng.linear.line;
 
 
 public class SingleLinkedList implements List{
