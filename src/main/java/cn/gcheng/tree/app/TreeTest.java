@@ -46,9 +46,19 @@ public class TreeTest {
         System.out.println();
 
 
+        //先序遍历非递归（借助栈） H、D、I、B、J、E、A、F、C、G
+        System.out.println("先序遍历非递归（借助栈）");
+        btree.preOrderByStack();
+        System.out.println();
+
         //中序遍历非递归（借助栈） H、D、I、B、J、E、A、F、C、G
         System.out.println("中序遍历非递归（借助栈）");
         btree.inOrderByStack();
+        System.out.println();
+
+        //后序遍历非递归（借助栈） H、D、I、B、J、E、A、F、C、G
+        System.out.println("后序遍历非递归（借助栈）");
+        btree.postOrderByStack();
         System.out.println();
 
         //按照层次遍历（借助队列）

@@ -9,6 +9,7 @@ package cn.gcheng.tree.util;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class LinkedBinaryTree implements BinaryTree {
 
@@ -155,7 +156,7 @@ public class LinkedBinaryTree implements BinaryTree {
         while (!stack.isEmpty()) {
             // 获取栈顶元素
             Node current = stack.pop();
-            System.out.print(current.value);
+            System.out.print(current.value + " ");
 
             // 右子节点不为空，入栈
             if (current.rightChild != null) {
@@ -171,7 +172,30 @@ public class LinkedBinaryTree implements BinaryTree {
 
     @Override
     public void postOrderByStack() {
+        if (root == null) {
+            return;
+        }
+        Deque<Node> s1 = new LinkedList<>();
+        Deque<Node> s2 = new LinkedList<>();
 
+        s1.push(root);
+        Node curNode;
+        while(!s1.isEmpty()) {
+            curNode = s1.pop();
+            // 中、右、左顺序压入栈中
+            s2.push(curNode);
+
+            // 压入s1为先左后右，保证中、右、左顺序压入s2中
+            if (curNode.leftChild != null) {
+                s1.push(curNode.leftChild);
+            }
+            if (curNode.rightChild != null) {
+                s1.push(curNode.rightChild);
+            }
+        }
+        while (!s2.isEmpty()) {
+            System.out.print(s2.pop().value + " ");
+        }
     }
 
     @Override
