@@ -45,7 +45,7 @@ public class InsertionSort {
         int temp;
         // 首次增量
         int h = len / 2;
-        // 增量最后一位必须为1，做最后的调整。
+        // 增量最后一次必须为1，做最后的调整。
         while (h > 0) {
             for (int i = h; i < len; i++) {
                 //i:代表即将插入的元素角标，作为每一组比较数据的最后一个元素角标
